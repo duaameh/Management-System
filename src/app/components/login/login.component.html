@@ -1,0 +1,30 @@
+<!-- <div>
+    <div>
+        <h1>Login User</h1>
+        <div *ngIf="success">
+            login user .....
+        </div>
+        <div *ngIf="error  ">
+            {{error}}
+        </div>
+        <div>
+            <div>
+                <input type="text" name="email" [(ngModel)]="email" placeholder="Enter your email">
+            </div>
+            <div>
+                <input type="password" name="password" [(ngModel)]="password" placeholder="Enter your password">
+            </div>
+            <div>
+                <button (click)="userLogin()">Login</button>
+            </div>
+        </div>
+    </div>
+</div> -->
+<form class="login">
+    <h3> Login ...</h3>
+    <input type="text" name="email" 
+    [(ngModel)]="email" placeholder="Enter your email">
+    <input type="password" name="password" [(ngModel)]="password" placeholder="Enter your password">
+    <button (click)="userLogin()">Login</button>
+</form>
+  

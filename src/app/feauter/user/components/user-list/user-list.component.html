@@ -1,0 +1,30 @@
+<div>
+  <button class="add-user-button" routerLink="/users/add">ADD USER</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Created At</th>
+      <th>Action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users ,let i=index">
+      <td>{{ user.id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.password |hiddenPass :'*':2}}</td>
+      <td>{{ user.create_at | date: 'yyyy-MM-dd' }}</td>
+      <td>
+        <button routerLink="/users/edit/{{user.id}}">EDIT</button>
+        <button (click)="deleted( user,i)">DELETE</button>
+        <button routerLink="/users/details/{{user.id}}">DETAILS</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

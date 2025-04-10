@@ -1,0 +1,36 @@
+<div class="add-user-container">
+    <div>
+      <h1> user {{id? 'Edite':' Add'}}</h1>
+      <div>
+        <a routerLink="/users/list">User list</a>
+      </div>
+      <!-- <div *ngIf="edit">
+        getting user .....
+      </div>
+      <div *ngIf="loading">
+        saving user .....
+      </div>
+      <div *ngIf="success">
+        {{success}}
+      </div>
+      <div *ngIf="error.length">
+        <div *ngFor="let error of error">
+          {{error}}
+        </div>
+      </div> -->
+      <div *ngIf="!edit">
+        <div>
+          <input type="text" name="name" [(ngModel)]="name" placeholder="Enter your name">
+        </div>
+        <div>
+          <input type="text" name="email" [(ngModel)]="email" placeholder="Enter your email">
+        </div>
+        <div>
+          <input type="password" name="password" [(ngModel)]="password" placeholder="Enter your password" >
+        </div>
+        <div>
+          <button (click)="saveBtnClick()"> {{id? 'Save Edite':' Add User'}}</button>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,60 @@
+/* تصميم الزر "ADD USER" */
+.add-user-button {
+  background-color: #663399;
+  color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 30px 0px;
+  }
+  .add-user-button:hover {
+    background-color: white; 
+    color:#663399;
+  }
+  /* تصميم الجدول */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden; /* لإخفاء الزوايا الزائدة عند تطبيق border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  }
+  
+  /* تصميم رأس الجدول */
+  thead {
+    background: linear-gradient(to right, #663399, #9932CC); /* تدرج لوني لرأس الجدول */
+    color: white;
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+  
+  th {
+    font-weight: 600;
+  }
+  
+  /* تصميم صفوف الجدول */
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* لون خلفية بديل للصفوف الزوجية */
+  }
+  
+  /* تصميم أزرار العمليات (EDIT، DELETE، DETAILS) داخل الجدول */
+  tbody button {
+    background-color: #e0e0e0; /* لون خلفية الأزرار داخل الجدول */
+    color: #333;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  tbody button:hover {
+    background-color: #d0d0d0; /* لون خلفية الأزرار عند التحويم */
+  }

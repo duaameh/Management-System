@@ -1,0 +1,43 @@
+/* تصميم الرأس (header) */
+.header {
+    background :linear-gradient(135deg, #470b60, #e7dfe9); /* لون خلفية الرأس */
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd; /* إضافة حد سفلي */
+    padding: 24px 0px;
+    margin: -8px -20px
+  }
+  
+  /* تصميم الحاوية الداخلية للرأس */
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* توزيع العناصر على الجانبين */
+    align-items: center; /* توسيط العناصر عموديًا */
+    max-width: 1200px; /* تحديد أقصى عرض للحاوية */
+    margin: 0 auto; /* توسيط الحاوية */
+    padding: 7px 20px; /* إضافة مسافة داخلية */
+  }
+  
+  /* تصميم عنوان الرأس */
+  .header-title {
+    color: white; /* لون العنوان */
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  /* تصميم زر "Logout" */
+  .logout-button {
+    background-color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #663399;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    font-weight: bold; /* إضافة تأثير الانتقال */
+  }
+  
+  .logout-button:hover {
+    background-color: #663399; /* لون خلفية الزر عند التحويم */
+    color:white;
+  }

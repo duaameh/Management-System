@@ -1,0 +1,28 @@
+<div class="user-details-container">
+    <h1>User Details</h1>
+  
+    <div *ngIf="loading">
+      Getting user...
+    </div>
+  
+    <div *ngIf="error.length">
+      <div *ngFor="let err of error">
+        {{ err }}
+      </div>
+    </div>
+  
+    <div *ngIf="user && !loading">
+      <div class="user-field">
+        <label for="name">Name:</label>
+        <span>{{ user.name }}</span>
+      </div>
+      <div class="user-field">
+        <label for="email">Email:</label>
+        <span>{{ user.email }}</span>
+      </div>
+      <div class="user-field">
+        <label for="password">Password:</label>
+        <span>{{ user.password }}</span>
+      </div>
+    </div>
+  </div>

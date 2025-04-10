@@ -1,0 +1,28 @@
+/* تصميم التذييل (footer) */
+.footer {
+    background-color: #f8f8f8; /* لون خلفية التذييل */
+    padding: 20px 0;
+    border-top: 1px solid #ddd; /* إضافة حد علوي */
+    text-align: center; /* توسيط النص */
+  }
+  
+  /* تصميم الحاوية الداخلية للتذييل */
+  .footer-container {
+    max-width: 1200px; /* تحديد أقصى عرض للحاوية */
+    margin: 0 auto; /* توسيط الحاوية */
+    padding: 0 20px; /* إضافة مسافة داخلية */
+  }
+  
+  /* تصميم نص حقوق النشر */
+  .copyright {
+    color: #333; /* لون النص */
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  /* تصميم نص "Design by Duss" */
+  .design-by {
+    color: #663399; /* لون النص */
+    font-size: 14px;
+    margin: 0;
+  }

@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0; /* لإزالة الهوامش الافتراضية للجسم */
+  }
+  
+  div {
+    flex-grow: 1;
+  }
+  
+  app-auth-footer {
+    width: 100%;
+    position: sticky; /* أو position: fixed; */
+    bottom: 0;
+  }
