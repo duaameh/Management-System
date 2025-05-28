@@ -1,0 +1,8 @@
+{
+  "routes": {
+    "/Management-System": {},
+    "/Management-System/users": {},
+    "/Management-System/users/add": {},
+    "/Management-System/users/list": {}
+  }
+}

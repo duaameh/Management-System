@@ -23,7 +23,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ang-task-md",
+            "outputPath": "docs/ang-task-md",
+            "baseHref": "/Management-System/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
