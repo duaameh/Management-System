@@ -47,7 +47,7 @@
 /* ريسبونسف بدون تغيير الشكل */
 @media (max-width: 600px) {
   .header {
-      margin: -1%;
+      margin: -3%;
 
   }
   .header-title {

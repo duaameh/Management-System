@@ -1,4 +1,4 @@
-/* تصميم الزر "ADD USER" */
+/* الزر */
 .add-user-button {
   background-color: #663399;
   color: white;
@@ -13,30 +13,28 @@
 }
 
 .add-user-button:hover {
-  background-color: white; 
+  background-color: white;
   color: #663399;
   border: 1px solid #663399;
 }
 
-/* تصميم الجدول */
+/* حاوية الجدول */
 .responsive-table-container {
   width: 100%;
   overflow-x: auto;
   margin-top: 20px;
 }
 
+/* الجدول */
 table {
-  width:90%; 
+  width: 100%;
   border-collapse: collapse;
   background-color: white;
   border-radius: 8px;
-  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 0; 
 }
 
-
-/* تصميم رأس الجدول */
+/* رأس الجدول */
 thead {
   background: linear-gradient(to right, #663399, #9932CC);
   color: white;
@@ -45,13 +43,14 @@ thead {
 th, td {
   padding: 12px 15px;
   text-align: left;
-    white-space: nowrap; 
+  white-space: nowrap;
 }
 
 th {
   font-weight: 600;
 }
-/* صفوف الجدول */
+
+/* صفوف متناوبة */
 tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
@@ -62,6 +61,8 @@ tbody button {
   color: #333;
   border: none;
   padding: 8px 12px;
+      font-weight: bold;
+
   margin: 5px 3px;
   border-radius: 4px;
   cursor: pointer;
@@ -73,28 +74,40 @@ tbody button:hover {
   background-color: #d0d0d0;
 }
 
-/* تعديلات الريسبونسف */
 @media (max-width: 600px) {
-  .add-user-button {
-    width: 70%; 
-    margin: 20px auto;
-    display: block;
-    text-align: start;
+  
+  /* جعل الجدول يأخذ عرض الشاشة بالكامل */
+  .responsive-table-container {
+    width: 95%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
-
+  
   table {
-    width: 90%;
+    font-size: 14px;
 
-    min-width: unset;
   }
-
+  
   th, td {
-    padding: 8px 10px;
-    font-size: 13px;
-  }
-
-  tbody button {
     padding: 6px 8px;
-    font-size: 12px;
+  }
+  
+  td[data-label="Action"] {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  tbody button {
+    padding: 4px 6px;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 2px 0;
+    width: 100%;
+  }
+  
+  td[data-label="Created At"], 
+  th:last-child {
+    display: none;
   }
 }

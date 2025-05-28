@@ -29,7 +29,7 @@ app-auth-footer {
 /* ريسبونسف نص الفوتر */
 @media (max-width: 600px) {
   app-auth-footer {
-    font-size: 12px;
+    font-size: 14px;
     width: 100%;
     padding: 10px 15px;
   }
