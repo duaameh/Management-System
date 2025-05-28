@@ -46,8 +46,12 @@
 
 /* ريسبونسف بدون تغيير الشكل */
 @media (max-width: 600px) {
+  .header {
+      margin: -1%;
+
+  }
   .header-title {
-    font-size: 24px;
+    font-size: 18px;
   }
 
   .logout-button {

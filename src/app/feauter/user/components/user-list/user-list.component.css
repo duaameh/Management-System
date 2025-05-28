@@ -26,14 +26,15 @@
 }
 
 table {
-  width: 90%;
-  min-width: 600px; /* لمنع تشوه الجدول في الشاشات الصغيرة */
+  width:90%; 
   border-collapse: collapse;
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 0; 
 }
+
 
 /* تصميم رأس الجدول */
 thead {
@@ -44,18 +45,18 @@ thead {
 th, td {
   padding: 12px 15px;
   text-align: left;
+    white-space: nowrap; 
 }
 
 th {
   font-weight: 600;
 }
-
-/* تصميم صفوف الجدول */
+/* صفوف الجدول */
 tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-/* تصميم أزرار العمليات */
+/* أزرار العمليات */
 tbody button {
   background-color: #e0e0e0;
   color: #333;
@@ -72,28 +73,28 @@ tbody button:hover {
   background-color: #d0d0d0;
 }
 
-/* Responsive adjustments */
+/* تعديلات الريسبونسف */
 @media (max-width: 600px) {
   .add-user-button {
-    width: 40%;
-    margin: 12% 0%;
-    text-align: center;
+    width: 70%; 
+    margin: 20px auto;
+    display: block;
+    text-align: start;
   }
 
   table {
-    min-width: unset;
-        padding: 30px;
-      width: 50%;
+    width: 90%;
 
+    min-width: unset;
   }
 
   th, td {
-    padding: 10px;
-    font-size: 14px;
+    padding: 8px 10px;
+    font-size: 13px;
   }
 
   tbody button {
-    padding: 6px 10px;
-    font-size: 13px;
+    padding: 6px 8px;
+    font-size: 12px;
   }
 }

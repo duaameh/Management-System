@@ -1,3 +1,4 @@
+/* أساسيات الصفحة */
 body {
   display: flex;
   flex-direction: column;
@@ -6,26 +7,30 @@ body {
   font-family: sans-serif;
 }
 
-/* المحتوى الرئيسي يجب أن يتمدد لملء المساحة */
+/* المحتوى الرئيسي يتمدد */
 main, .content, div {
   flex-grow: 1;
 }
 
-/* الفوتر */
+/* تصميم الفوتر */
 app-auth-footer {
   width: 100%;
   background-color: #f5f5f5;
-  padding: 10px 20px;
+  padding: 15px 20px;
   text-align: center;
   color: #666;
   font-size: 14px;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
-  
-  position: sticky;
-  bottom: 0;
-  /* OR use this if you want it to always be visible on the screen */
-  /* position: fixed;
-     bottom: 0;
-     left: 0;
-     z-index: 1000; */
+
+  /* مهمته يبقى بأسفل الصفحة لكن يتحرك لو المحتوى أطول */
+  margin-top: auto;
+}
+
+/* ريسبونسف نص الفوتر */
+@media (max-width: 600px) {
+  app-auth-footer {
+    font-size: 12px;
+    width: 100%;
+    padding: 10px 15px;
+  }
 }

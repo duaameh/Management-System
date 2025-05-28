@@ -1,4 +1,3 @@
-/* إعداد الجسم لجعل الفوتر يثبت في الأسفل */
 body {
   display: flex;
   flex-direction: column;
@@ -7,22 +6,19 @@ body {
   font-family: sans-serif;
 }
 
-/* العنصر الذي يحتوي على محتوى الصفحة */
 .main-content {
   flex: 1;
 }
 
-/* تصميم التذييل (footer) */
 .footer {
   background-color: #f8f8f8;
   padding: 20px 0;
   border-top: 1px solid #ddd;
   text-align: center;
   width: 100%;
-  margin-top: auto; /* يجعل التذييل يلتصق بأسفل الصفحة دائمًا */
+  margin-top: auto; 
 }
 
-/* تصميم الحاوية الداخلية للتذييل */
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
