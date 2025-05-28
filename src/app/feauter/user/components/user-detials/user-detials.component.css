@@ -1,66 +1,82 @@
-/* تصميم الحاوية الرئيسية */
 .user-details-container {
-    width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: sans-serif;
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: sans-serif;
+}
+
+.user-details-container h1 {
+  color: #663399;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-details-container div[ngIf="loading"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #e0f7fa;
+  color: #00acc1;
+}
+
+.user-details-container div[ngIf="error.length"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #ffe0b2;
+  color: #ff9800;
+}
+
+.user-details-container div[ngIf="user && !loading"] {
+  margin-top: 20px;
+}
+
+.user-details-container .user-field {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.user-details-container label {
+  width: 100px;
+  font-weight: 600;
+  color: #333;
+  text-align: left;
+  padding-top: 5px;
+}
+
+.user-details-container span {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  text-align: left;
+  width: calc(100% - 110px);
+}
+
+@media (max-width: 600px) {
+  .user-details-container {
+    width: 78%;
+    padding: 20px;
+    margin: 70px 20px;
   }
-  
-  /* تصميم عنوان الصفحة */
-  .user-details-container h1 {
-    color: #663399;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  /* تصميم رسالة التحميل */
-  .user-details-container div[ngIf="loading"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    background-color: #e0f7fa;
-    color: #00acc1;
-  }
-  
-  /* تصميم رسائل الخطأ */
-  .user-details-container div[ngIf="error.length"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    background-color: #ffe0b2;
-    color: #ff9800;
-  }
-  
-  /* تصميم بيانات المستخدم */
-  .user-details-container div[ngIf="user && !loading"] {
-    margin-top: 20px;
-  }
-  
-  /* تصميم حقول المستخدم */
+
   .user-details-container .user-field {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
+    flex-direction: column;
   }
-  
-  /* تصميم تسميات الحقول */
+
   .user-details-container label {
-    width: 100px;
-    font-weight: 600;
-    color: #333;
-    text-align: left;
-    padding-top: 5px;
+    width: 70%;
+    margin-bottom: 5px;
   }
-  
-  /* تصميم قيم الحقول */
+
   .user-details-container span {
-    flex-grow: 1;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    text-align: left;
+    width: 70%;
   }
+}

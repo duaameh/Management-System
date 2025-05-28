@@ -1,12 +1,32 @@
 .login {
   width: 450px;
-  height: 301px;
+  max-width: 90%; /* يسمح للعرض أن يتقلص على الشاشات الصغيرة */
+  height: auto;
   margin: 50px auto;
   padding: 25px;
   background: linear-gradient(135deg, #470b60, #e7dfe9);
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  text-align: center
+  text-align: center;
+  box-sizing: border-box;
+}
+.demo-note {
+      display: flex;
+    justify-content: space-around;
+    border-left: 4px solid #470b60;  /* حد أزرق */
+    padding: 10px;
+    margin: 15px 0;
+    font-size: 14px;
+    border-radius: 0 4px 4px 0;
+}
+
+.demo-note p {
+    margin: 5px 0;
+}
+
+.highlight {
+    color: #edf0ee;  /* لون أخضر */
+    font-weight: bold;
 }
 
 .login h3 {
@@ -17,6 +37,7 @@
 
 .login input {
   width: 75%;
+  max-width: 100%;
   padding: 12px;
   margin: 10px 0;
   border: 2px solid white;
@@ -25,6 +46,7 @@
   background-color: rgba(255, 255, 255, 0.9);
   color: #6a0dad;
   transition: all 0.3s;
+  box-sizing: border-box;
 }
 
 .login input:focus {
@@ -34,6 +56,7 @@
 
 .login button {
   width: 30%;
+  min-width: 100px;
   padding: 12px;
   background-color: white;
   color: #7b1fa2;
@@ -46,7 +69,24 @@
 }
 
 .login button:hover {
-  background: none; /* أرجواني غامق */
+  background: none;
   color: white;
   transform: scale(1.05);
+}
+
+/* ✅ استجابة للشاشات الصغيرة */
+@media (max-width: 500px) {
+  .login h3 {
+    font-size: 24px;
+  }
+
+  .login input {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .login button {
+    width: 50%;
+    font-size: 16px;
+  }
 }

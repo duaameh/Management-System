@@ -1,28 +1,44 @@
+/* إعداد الجسم لجعل الفوتر يثبت في الأسفل */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* العنصر الذي يحتوي على محتوى الصفحة */
+.main-content {
+  flex: 1;
+}
+
 /* تصميم التذييل (footer) */
 .footer {
-    background-color: #f8f8f8; /* لون خلفية التذييل */
-    padding: 20px 0;
-    border-top: 1px solid #ddd; /* إضافة حد علوي */
-    text-align: center; /* توسيط النص */
-  }
-  
-  /* تصميم الحاوية الداخلية للتذييل */
-  .footer-container {
-    max-width: 1200px; /* تحديد أقصى عرض للحاوية */
-    margin: 0 auto; /* توسيط الحاوية */
-    padding: 0 20px; /* إضافة مسافة داخلية */
-  }
-  
-  /* تصميم نص حقوق النشر */
-  .copyright {
-    color: #333; /* لون النص */
-    font-size: 14px;
-    margin: 0;
-  }
-  
-  /* تصميم نص "Design by Duss" */
-  .design-by {
-    color: #663399; /* لون النص */
-    font-size: 14px;
-    margin: 0;
-  }
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; /* يجعل التذييل يلتصق بأسفل الصفحة دائمًا */
+}
+
+/* تصميم الحاوية الداخلية للتذييل */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* نص حقوق النشر */
+.copyright {
+  color: #333;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* نص "Design by Duss" */
+.design-by {
+  color: #663399;
+  font-size: 14px;
+  margin: 0;
+}

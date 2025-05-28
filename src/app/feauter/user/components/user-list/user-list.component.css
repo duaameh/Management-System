@@ -2,59 +2,98 @@
 .add-user-button {
   background-color: #663399;
   color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 30px 0px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 30px 0;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.add-user-button:hover {
+  background-color: white; 
+  color: #663399;
+  border: 1px solid #663399;
+}
+
+/* تصميم الجدول */
+.responsive-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 90%;
+  min-width: 600px; /* لمنع تشوه الجدول في الشاشات الصغيرة */
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* تصميم رأس الجدول */
+thead {
+  background: linear-gradient(to right, #663399, #9932CC);
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  font-weight: 600;
+}
+
+/* تصميم صفوف الجدول */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* تصميم أزرار العمليات */
+tbody button {
+  background-color: #e0e0e0;
+  color: #333;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+tbody button:hover {
+  background-color: #d0d0d0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .add-user-button {
+    width: 40%;
+    margin: 12% 0%;
+    text-align: center;
   }
-  .add-user-button:hover {
-    background-color: white; 
-    color:#663399;
-  }
-  /* تصميم الجدول */
+
   table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden; /* لإخفاء الزوايا الزائدة عند تطبيق border-radius */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+    min-width: unset;
+        padding: 30px;
+      width: 50%;
+
   }
-  
-  /* تصميم رأس الجدول */
-  thead {
-    background: linear-gradient(to right, #663399, #9932CC); /* تدرج لوني لرأس الجدول */
-    color: white;
-  }
-  
+
   th, td {
-    padding: 12px 15px;
-    text-align: left;
-  }
-  
-  th {
-    font-weight: 600;
-  }
-  
-  /* تصميم صفوف الجدول */
-  tbody tr:nth-child(even) {
-    background-color: #f9f9f9; /* لون خلفية بديل للصفوف الزوجية */
-  }
-  
-  /* تصميم أزرار العمليات (EDIT، DELETE، DETAILS) داخل الجدول */
-  tbody button {
-    background-color: #e0e0e0; /* لون خلفية الأزرار داخل الجدول */
-    color: #333;
-    border: none;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 10px;
     font-size: 14px;
   }
-  
-  tbody button:hover {
-    background-color: #d0d0d0; /* لون خلفية الأزرار عند التحويم */
+
+  tbody button {
+    padding: 6px 10px;
+    font-size: 13px;
   }
+}

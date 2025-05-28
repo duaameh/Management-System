@@ -1,43 +1,61 @@
 /* تصميم الرأس (header) */
 .header {
-    background :linear-gradient(135deg, #470b60, #e7dfe9); /* لون خلفية الرأس */
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd; /* إضافة حد سفلي */
-    padding: 24px 0px;
-    margin: -8px -20px
-  }
-  
-  /* تصميم الحاوية الداخلية للرأس */
-  .header-container {
-    display: flex;
-    justify-content: space-between; /* توزيع العناصر على الجانبين */
-    align-items: center; /* توسيط العناصر عموديًا */
-    max-width: 1200px; /* تحديد أقصى عرض للحاوية */
-    margin: 0 auto; /* توسيط الحاوية */
-    padding: 7px 20px; /* إضافة مسافة داخلية */
-  }
-  
-  /* تصميم عنوان الرأس */
+  background: linear-gradient(135deg, #470b60, #e7dfe9);
+  padding: 20px ;
+  border-bottom: 1px solid #ddd;
+  margin: -1%;
+}
+
+/* الحاوية الداخلية */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex-wrap: nowrap; /* عشان ما ينزل الزر تحت */
+}
+
+/* عنوان الرأس */
+.header-title {
+  color: white;
+  font-size: 30px;
+  margin: 0;
+}
+
+/* زر الخروج */
+.logout-button {
+  background-color: white;
+  padding: 10px 20px;
+  border: none;
+  margin: 0 3%;
+  border-radius: 5px;
+  color: #663399;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+/* تأثير التحويم */
+.logout-button:hover {
+  background-color: #663399;
+  color: white;
+}
+
+/* ريسبونسف بدون تغيير الشكل */
+@media (max-width: 600px) {
   .header-title {
-    color: white; /* لون العنوان */
-    font-size: 30px;
-    margin: 0;
+    font-size: 24px;
   }
-  
-  /* تصميم زر "Logout" */
+
   .logout-button {
-    background-color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    color: #663399;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    font-weight: bold; /* إضافة تأثير الانتقال */
+    padding: 8px 16px;
+    font-size: 14px;
   }
-  
-  .logout-button:hover {
-    background-color: #663399; /* لون خلفية الزر عند التحويم */
-    color:white;
+
+  .header-container {
+    padding: 0 10px;
   }
+}
